@@ -1,25 +1,59 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
-function App() {
+const Title = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <h1 id="title" key="h1">
+      Food Villa
+    </h1>
+  )
+}
+
+const HeaderComponent = () => {
+  return (
+    <div className="header">
+      <Title />
+      <div className="nav-items">
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li> Contact</li>
+          <li> Cart</li>
+        </ul>
+      </div>
+    </div>
+  )
+}
+
+
+ 
+function App() {
+  return <AppLayout />;
+}
+
+const AppLayout = () => {
+  return (
+    <div>
+      {/* 
+      Header
+        - Logo
+        - Nav Items (Right side)
+        - Cart
+      Body
+        - Search Bar
+        - RestrauntList
+          - Restraurent Card
+            - Img
+            - Name
+            - Rating
+            - Cusines
+      Footer
+        - Links
+        - Copyright
+      */}
+
+<HeaderComponent />
     </div>
   );
-}
+};
 
 export default App;
